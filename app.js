@@ -17,12 +17,22 @@ document.addEventListener("input", function () {
     Number(billValue.value) + Number(tipValue.textContent)
   );
   numberOfPeople.textContent = peopleRange.value;
-  tipPerPerson.textContent = roundToTwoDecimalPlaces(
-    Number(tipValue.textContent) / peopleRange.value
-  );
-  totalPerPerson.textContent = roundToTwoDecimalPlaces(
-    Number(totalAmount.textContent) / peopleRange.value
-  );
+  tipPerPerson.textContent =
+    roundToTwoDecimalPlaces(
+      Number(tipValue.textContent || 0) / peopleRange.value
+    ) == Infinity
+      ? roundToTwoDecimalPlaces(0)
+      : roundToTwoDecimalPlaces(
+          Number(tipValue.textContent) / peopleRange.value || 0
+        );
+  totalPerPerson.textContent =
+    roundToTwoDecimalPlaces(
+      Number(totalAmount.textContent) / peopleRange.value || 0
+    ) == Infinity
+      ? roundToTwoDecimalPlaces(0)
+      : roundToTwoDecimalPlaces(
+          Number(totalAmount.textContent) / peopleRange.value || 0
+        );
 });
 function roundToTwoDecimalPlaces(num) {
   return num.toFixed(2);
