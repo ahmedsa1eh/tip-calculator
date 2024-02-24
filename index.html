@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="bill flex">
+        <p>Bill</p>
+        <input type="number" placeholder="00.00$" class="bill-value" />
+      </div>
+      <div class="tip flex">
+        <p>Tip</p>
+        <p>$ <span class="tip-value"></span>0.00</span></p>
+      </div>
+      <div class="total-amount flex">
+        <p>Total Amount</p>
+        <p>$ <span class="total-amount-value">0.00</span></p>
+      </div>
+      <div class="tip-bar gab">
+        <div class="tip-bar-text flex">
+            <p>Tip %</p>
+            <p>12<span>%</span></p>
+        </div>
+        <input type="range" step="1" maxlength="100" class="range">
+      </div>
+      <div class="no-people gab">
+        <div class="number-people-bar-text flex">
+            <p>No. of People</p>
+            <p>3</p>
+        </div>
+        <input type="range" step="1" max="15" class="range">
+      </div>
+      <div class="footer gab">
+        <div class="tip-person flex">
+            <p>Tip Per Person</p>
+            <p><span>$</span>3.60</p>
+        </div>
+        <div class="total-person flex">
+            <p>Total Per Person</p>
+            <p><span>$</span>30.60</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
