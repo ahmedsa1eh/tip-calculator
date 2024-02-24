@@ -14,7 +14,7 @@
       </div>
       <div class="tip flex">
         <p>Tip</p>
-        <p>$ <span class="tip-value"></span>0.00</span></p>
+        <p>$ <span class="tip-value">0.00</span></p>
       </div>
       <div class="total-amount flex">
         <p>Total Amount</p>
@@ -22,28 +22,41 @@
       </div>
       <div class="tip-bar gab">
         <div class="tip-bar-text flex">
-            <p>Tip %</p>
-            <p>12<span>%</span></p>
+          <p>Tip %</p>
+          <p><span class="tip-percent">12</span>%</p>
         </div>
-        <input type="range" step="1" maxlength="100" class="range">
+        <input
+          type="range"
+          step="1"
+          maxlength="100"
+          value="12"
+          class="range tip-range"
+        />
       </div>
       <div class="no-people gab">
         <div class="number-people-bar-text flex">
-            <p>No. of People</p>
-            <p>3</p>
+          <p>No. of People</p>
+          <p><span class="number-people">3 </span> Person</p>
         </div>
-        <input type="range" step="1" max="15" class="range">
+        <input
+          type="range"
+          step="1"
+          value="3"
+          max="15"
+          class="range people-range"
+        />
       </div>
       <div class="footer gab">
         <div class="tip-person flex">
-            <p>Tip Per Person</p>
-            <p><span>$</span>3.60</p>
+          <p>Tip Per Person</p>
+          <p>$<span class="tip-per-person">0.00</span></p>
         </div>
         <div class="total-person flex">
-            <p>Total Per Person</p>
-            <p><span>$</span>30.60</p>
+          <p>Total Per Person</p>
+          <p>$<span class="total-per-person">0.00</span></p>
         </div>
       </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
